@@ -17,7 +17,7 @@ class BookCreateModel(BaseModel):
   title: str
   author: str
   publisher: str
-  published_date: str
+  published_date: datetime
   page_count: int
   language: str
 
@@ -25,6 +25,6 @@ class BookUpdateModel(BaseModel):
   title: str
   author: str
   publisher: str
-  published_date: str
+  published_date: datetime
   page_count: int
   language: str

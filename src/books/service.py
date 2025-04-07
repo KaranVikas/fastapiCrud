@@ -27,8 +27,7 @@ class BookService:
       
       **book_data_dict
     )
-
-    new_book.published_date = datetime.strptime(book_data_dict['published_date'],'%Y-%m-%d')
+    print("in service", new_book)
 
     session.add(new_book)
 

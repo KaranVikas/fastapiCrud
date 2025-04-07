@@ -21,7 +21,7 @@ async def get_all_book(session:AsyncSession=Depends(get_session)):
     raise
 
 @book_router.post('/', status_code=status.HTTP_201_CREATED, response_model=Book)
-async def create_book(book_data:Book, session:AsyncSession=Depends(get_session)) -> dict:
+async def create_book(book_data:BookCreateModel, session:AsyncSession=Depends(get_session)) -> dict:
   print("Before dumping data in python")
   new_book = await book_service.create_book(book_data, session)
   print("After dumping data in the python")
